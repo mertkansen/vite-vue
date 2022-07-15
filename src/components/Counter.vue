@@ -18,25 +18,3 @@ const setCount = (val) => (count.value += val);
 
 <style scoped></style>
 
-<!-- 
-  Bu şekilde prop alıyoruz
-  defineProps({
-  msg: String,
-  });
-
-***************************************
-  useMemo
-  counted -> useMemo
-
-  useEffect
-  watch -> useEffect [a,b,c]
-  onMounted -> useEffect []
-  onUnmounted -> useEffect [] return
-
-  const value = counted(() => "state stuff")
-  onMounted(() => { doStuff })
-  onUnmounted(() => { doStuff on unmont})
-  watch([state], () => {
-    doStuff when state changes
-  })
- -->

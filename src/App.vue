@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-import { useMouse } from "./components/mouse";
+import { useMouse } from "./composables/mouse";
 import { useTitle, useRefHistory } from "@vueuse/core";
 
 const { x, y } = useMouse();
@@ -28,3 +28,26 @@ const handleUndo = () => {
 </template>
 
 <style scoped></style>
+
+<!-- 
+  Bu şekilde prop alıyoruz
+  defineProps({
+    msg: String,
+  });
+
+***************************************
+  useMemo
+  computed -> useMemo
+
+  useEffect
+  watch -> useEffect [a,b,c]
+  onMounted -> useEffect []
+  onUnmounted -> useEffect [] return
+
+  const value = computed(() => "state stuff")
+  onMounted(() => { doStuff })
+  onUnmounted(() => { doStuff on unmont})
+  watch([state], () => {
+    doStuff when state changes
+  })
+ -->
