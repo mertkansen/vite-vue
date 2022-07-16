@@ -2,6 +2,7 @@
 import { ref } from "vue";
 import { useMouse } from "./composables/mouse";
 import { useTitle, useRefHistory } from "@vueuse/core";
+import CounterWithGlobalState from "./components/CounterWithGlobalState.vue";
 
 const { x, y } = useMouse();
 
@@ -19,15 +20,32 @@ const handleUndo = () => {
   undo();
   console.log(count.value);
 };
+
+const date = new Date();
+
+const [day, month, year] = [
+  date.getDate(),
+  String(date.getMonth() + 1).padStart(2, "0"),
+  date.getFullYear(),
+];
 </script>
 
 <template>
+  <h3>{{ day }}.{{ month }}.{{ year }}</h3>
   <h2 @click="handleUndo">Title is {{ title }}</h2>
   <h1>Mouse position is at: {{ x }}, {{ y }}</h1>
   <input type="text" v-model="title" />
+  <br />
+  <CounterWithGlobalState />
 </template>
 
-<style scoped></style>
+<style scoped>
+h3 {
+  color: orange;
+  text-align: center;
+  margin: 20px;
+}
+</style>
 
 <!-- 
   Bu şekilde prop alıyoruz
