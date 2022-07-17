@@ -20,3 +20,8 @@
     doStuff when state changes
   })
  -->
+
+fotoları felan değişkene alıp kullanabilmek için bind etmek gerekiyor "v-bind:"
+ya da kısaca ":" kullanabiliriz.
+
+

@@ -1,6 +1,6 @@
 <script setup>
-import trees from "../assets/trees.jpg";
-import ange from "../assets/ange.jpg";
+import trees from "../../styles/assets/trees.jpg";
+import ange from "../../styles/assets/ange.jpg";
 </script>
 
 <template>

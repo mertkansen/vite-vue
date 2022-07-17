@@ -1,5 +1,5 @@
 <script setup>
-import Header from "./components/Header.vue";
+import Header from "./components/global/Header.vue";
 </script>
 
 <template>
@@ -9,3 +9,5 @@ import Header from "./components/Header.vue";
 </template>
 
 <style scoped></style>
+
+// https://www.youtube.com/watch?v=qZXt1Aom3Cs 38:08
