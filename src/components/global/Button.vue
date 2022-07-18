@@ -1,12 +1,8 @@
 <script setup>
-import { ref } from "vue";
-
 defineProps({
   title: String,
   color: String,
 });
-
-const tasks = ref([]);
 
 const handleClick = (event) => {
   console.log(event.target);

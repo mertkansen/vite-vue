@@ -1,5 +1,5 @@
 <script setup>
-import Button from "../global/Button.vue";
+import Button from "../../global/Button.vue";
 defineProps({});
 </script>
 

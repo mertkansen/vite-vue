@@ -2,8 +2,8 @@ import { createApp } from "vue";
 import { createPinia } from "pinia";
 import { router } from "./routes/routes";
 
-import "./styles/style.css";
 import App from "./App.vue";
+import "./styles/style.css";
 
 // Create a pinia instance (the root store) and pass it to the app as a plugin:
 const pinia = createPinia();

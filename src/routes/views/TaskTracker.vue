@@ -1,10 +1,16 @@
 <script setup>
-import TTHeader from "../../components/common/TTHeader.vue";
+import { useTasksStore } from "../../stores/tasksStore";
+
+import Header from "../../components/common/TaskTracker/Header.vue";
+import Tasks from "../../components/common/TaskTracker/Tasks.vue";
+
+const store = useTasksStore();
 </script>
 
 <template>
   <div class="container">
-    <TTHeader />
+    <Header />
+    <Tasks :tasks="store.tasks" />
   </div>
 </template>
 
