@@ -16,5 +16,10 @@ export const useTasksStore = defineStore("tasks", {
     removeItem(id) {
       this.tasks = this.tasks.filter((item) => item.id !== id);
     },
+    toggleReminder(id) {
+      const itemId = this.tasks.findIndex((item) => item.id === id);
+
+      this.tasks[itemId].reminder = !this.tasks[itemId].reminder;
+    },
   },
 });

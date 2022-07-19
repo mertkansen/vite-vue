@@ -5,18 +5,17 @@ defineProps({
   task: Object,
 });
 
-const { removeItem } = useTasksStore();
-
-const deleteItem = (id) => {
-  removeItem(id);
-};
+const { removeItem, toggleReminder } = useTasksStore();
 </script>
 
 <template>
-  <div :class="{ reminder: task.reminder, task }">
+  <div
+    @dblclick="toggleReminder(task.id)"
+    :class="{ reminder: task.reminder, task }"
+  >
     <h3>
       {{ task?.text }}
-      <i @click="deleteItem(task.id)" class="fas fa-times"></i>
+      <i @click="removeItem(task.id)" class="fas fa-times"></i>
     </h3>
     <p>{{ task?.day }}</p>
   </div>

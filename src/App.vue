@@ -10,4 +10,4 @@ import Header from "./components/global/Header.vue";
 
 <style scoped></style>
 
-// https://www.youtube.com/watch?v=qZXt1Aom3Cs 38:08
+// https://www.youtube.com/watch?v=qZXt1Aom3Cs 56.15
