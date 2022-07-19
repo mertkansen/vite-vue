@@ -1,12 +1,19 @@
 <script setup>
 import Button from "../../global/Button.vue";
-defineProps({});
+import { useTasksStore } from "../../../stores/tasksStore";
+
+const store = useTasksStore();
+const { toggleShowAddTask } = store;
 </script>
 
 <template>
   <header>
     <h1>Task Tracker</h1>
-    <Button color="green" title="Add Task" />
+    <Button
+      @click="toggleShowAddTask"
+      :color="store.showAddTask ? 'red' : 'green'"
+      :title="store.showAddTask ? 'Close' : 'Add Task'"
+    />
   </header>
 </template>
 

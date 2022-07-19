@@ -6,6 +6,12 @@ defineProps({
 });
 
 const { removeItem, toggleReminder } = useTasksStore();
+
+const handleRemove = (id) => {
+  if (confirm("are you sure?")) {
+    removeItem(id);
+  }
+};
 </script>
 
 <template>
@@ -15,7 +21,7 @@ const { removeItem, toggleReminder } = useTasksStore();
   >
     <h3>
       {{ task?.text }}
-      <i @click="removeItem(task.id)" class="fas fa-times"></i>
+      <i @click="handleRemove(task.id)" class="fas fa-times"></i>
     </h3>
     <p>{{ task?.day }}</p>
   </div>

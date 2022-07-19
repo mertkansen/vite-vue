@@ -3,14 +3,10 @@ defineProps({
   title: String,
   color: String,
 });
-
-const handleClick = (event) => {
-  console.log(event.target);
-};
 </script>
 
 <template>
-  <button @click="handleClick" :style="{ background: color }" class="btn">
+  <button :style="{ background: color }" class="btn">
     {{ title }}
   </button>
 </template>
